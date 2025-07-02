@@ -4,7 +4,7 @@
 
  ### I made it to practice my theme logic.
 
- 📺[live demo](https://themeSwitch.netlify.app)
+ 📺[live demo](https://themeswitchsimple.netlify.app/)
 
  📝Notes:
 
