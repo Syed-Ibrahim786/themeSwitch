@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --dark:black;
+            --light:white;
+        }
+        .darktheme{
+            --dark:white;
+            --light:rgb(33, 33, 33);
+        }
+        body{
+            background-color: var(--light);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            display:flex;
+            align-items: center;
+            height:auto;
+            justify-content: space-between;
+        }
+        .header h2{
+            color:orangered;
+            padding-left: 10%;
+            align-self: center;
+            
+        }
+        .header ul{
+            list-style-type: none;
+            display: flex;
+            padding-right: 10%;
+        }
+        .header li{
+            display: block;
+            padding: 20px;
+            align-self: center;
+            color: var(--dark);
+        }
+        .header a{
+            display: block;
+            text-decoration: none;
+            color:var(--dark);
+            transition: .4s;
+            &:hover{
+                color: orangered;
+                transform: scale(1.2);
+            }
+            
+            
+        }
+        .header li:hover{
+                
+                
+            }
+        
+        .header img{
+            height:20px;
+            width:20px ;
+            align-self: center;
+            
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contentmedia{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .contentmedia p{
+            margin-top: 10px;
+            color: var(--dark);
+        }
+        .contentmedia button{
+            width: 120px;
+            height: 40px;
+            margin-top:20px;
+            background-color: var(--dark);
+            color: var(--light);
+            border: none;
+        }
+        .about h1{
+            color: var(--dark);
+        }
+        .myimage{
+            display: block;
+            //margin-right: 10%;
+            height: 70vh;
+            width: 50vw;
+            
+        }
+        .logos{
+            display: flex;
+            width: 150px;
+            justify-content: space-between;
+            
+            margin-left: 10%;
+            
+        }
+        .logos img{
+            height: 20px;
+            width: 20px;
+            color: var(--dark);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>LOGO</h2>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">About me</a></li>
+            <li><a href="">Contact</a></li>
+            <img onclick = "changeTheme()"src="dark.png" id = "theme"alt="">
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="contentmedia">
+
+            <div class="about">
+                <h1>I'M <SPAN style="color:orangered">SYED</SPAN> IBRAHIM</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, quis.</p>
+                <button>view resume</button>
+            </div>
+            
+            
+
+        </div>
+
+        <img class="myimage"src="me.png" alt="">
+    </div>
+    <div class="logos">
+        <img src="fb.png" alt=""><img src="insta.png" alt=""><img src="linkedin.png" alt="">
+    </div>
+
+
+
+
+    <script>
+        const theme = document.getElementById("theme");
+
+        theme.addEventListener("click",() =>{
+            document.body.classList.toggle("darktheme");
+            if(document.body.classList.contains("darktheme")){
+                theme.src = "light.png";
+            } 
+            else{
+                theme.src = "dark.png"
+            }
+        })
+    </script>
+
+    
+</body>
+</html>
